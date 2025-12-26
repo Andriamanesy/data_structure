@@ -80,12 +80,12 @@ valgrind --leak-check=full ./main
 
 ## 📊 Analyse de Complexité en C
 
-| Structure | Accès | Recherche | Insertion | Gestion Mémoire |
-| --------- | ----- | --------- | --------- | --------------- |
-| **Array** |       |           |           |Statique/`realloc`|
-| **Linked List** | |           |           |Dynamique (`malloc`)|
-| **Hash Table** |  |           |           | Dynamique |
-| **BST** |         |           |           | Dynamique (Récursif)|
+| Structure 		| Accès  | Recherche | Insertion | Gestion Mémoire |
+| --------- 		| -----  | --------- | --------- | --------------- |
+| **Array** 		| O(1)   |  O(n)     |  O(n)     |Statique/`realloc`|
+| **Linked List** 	| O(n)	 |  O(n)     |  O(1)     |Dynamique (`malloc`)|
+| **Hash Table** 	| N/A 	 |  O(1)     |  O(1)     | Dynamique |
+| **BST** 		|O(log n)|  O(log n) |  O(log n) | Dynamique (Récursif)|
 
 ---
 
