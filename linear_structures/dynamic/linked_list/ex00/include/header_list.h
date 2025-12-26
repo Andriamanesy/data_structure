@@ -14,5 +14,6 @@ struct s_list
 t_list	*create_node(void *data);
 void	print_list(t_list *head, void (*f)(void *));
 void	add_front(t_list **head, void *data);
+void add_back(t_list **head, void *data);
 
 #endif

@@ -28,11 +28,24 @@ void	test_add_front()
 	assert(head->next->next == NULL);
 }
 
+void	test_add_back()
+{
+	int val1 = 42;
+	int val2 = 50;
+	t_list *head = create_node(&val1);
+	assert(head != NULL);
+	add_back(&head, &val2);
+	assert(*(int *)(head->next->data) == 50);
+	assert(head->next != NULL);
+	assert(head->next->next == NULL);
+}
+
 int main(void)
 {
 	printf("Staring Linked List TDD... \n");
 	test_node_creation();
 	test_add_front();
+	test_add_back();
 	printf(" All tests passed successfully!\n");
 	return (0);
 }

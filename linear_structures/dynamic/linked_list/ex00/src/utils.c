@@ -40,3 +40,23 @@ void	add_front(t_list **head, void *data)
 	new_node->next = *head;
 	*head = new_node;
 }
+void add_back(t_list **head, void *data)
+{
+	if(!head)
+		return ;
+	t_list *new_node = malloc(sizeof(t_list));
+	if(!new_node)
+		return ;
+	new_node->data = data;
+	new_node->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return ;		
+	}
+	t_list *tmp = *head;
+
+	while(tmp->next)
+		tmp = tmp->next;
+	tmp->next = new_node;
+}
