@@ -13,12 +13,26 @@ void	test_node_creation()
 	assert(node->next == NULL);
 	printf("Test Node Creation: Passed\n");
 }
+void	test_add_front()
+{
+	t_list *head;
+	int val1 = 42;
+	int val2 = 50;
+	head = create_node(&val1);
+	
+	assert(head != NULL);
+	add_front(&head, &val2);
+	assert(*(int *)(head->data) == 50);
+	assert(head->next != NULL);
+	assert(*(int *)(head->next->data) == 42);
+	assert(head->next->next == NULL);
+}
 
 int main(void)
 {
 	printf("Staring Linked List TDD... \n");
 	test_node_creation();
-
+	test_add_front();
 	printf(" All tests passed successfully!\n");
 	return (0);
 }
